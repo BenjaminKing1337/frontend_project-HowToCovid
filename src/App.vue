@@ -1,32 +1,59 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <ourNavbar></ourNavbar>
+    <ourContent class="content"></ourContent>
+    <ourFooter></ourFooter>
   </div>
 </template>
 
+<script>
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+export default {
+  components:{
+    ourNavbar: Navbar,
+    ourContent: Content,
+    ourFooter: Footer,
+  }
+}
+</script>
+
 <style lang="scss">
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+body::-webkit-scrollbar{
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+  background: #5B5A5A;
+}
+body::-webkit-scrollbar-thumb{
+  background: #C7D40F;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: pink;
+  color: black;
+}
+:root{
+  font-size: 16px;
+}
+.content{
+  margin-left: 5rem;
+  padding: 1rem;
+  height: 100vh;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+@media only screen and (max-width: 600px){
+  .content{
+    margin: 0;
   }
 }
 </style>
