@@ -59,6 +59,10 @@
             }
             .nav-item{
                 width: 100%;
+                transition: 200ms ease-in-out;
+                &:hover{
+                    background: rgb(112, 112, 112);
+                }
                 .nav-link{
                     display: flex;
                     align-items: center;
@@ -80,7 +84,7 @@
         }
     }
     .router-link-exact-active {
-      background: rgb(68, 68, 68);;
+      background: rgb(68, 68, 68);
     }
 
     /*small screen*/

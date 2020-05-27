@@ -48,13 +48,13 @@ body::-webkit-scrollbar-thumb{
 .content{
   margin-left: 5rem;
   padding: 1rem;
-  height: 100vh;
+  height: auto;
 }
 
 
 @media only screen and (max-width: 600px){
   .content{
-    margin: 0;
+    margin: 0 0 5rem 0;
   }
 }
 </style>

@@ -56,6 +56,14 @@
         h1,p{
             font-size: 1.2vw;
         }
+        ul{
+            list-style: none;
+        }
+    }
+    @media only screen and (max-width: 600px){
+        footer{
+            display: none;
+        }
     }
     
 </style>
