@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Info from '../views/Info.vue'
 import Contact from '../views/Contact.vue'
+import Infographic from '../views/Infographic.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/contact',
     name: 'Contact',
     component: Contact,
+  },
+  {
+    path: '/infographic',
+    name: 'Infographic',
+    component: Infographic,
   },
   
 ]

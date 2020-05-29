@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-view></router-view>
+        <router-view class="router"></router-view>
     </div>
 </template>
 
@@ -11,5 +11,7 @@
 </script>
 
 <style lang="scss" scoped>
-    
+    .router{
+        min-height: 100vh;
+    }
 </style>

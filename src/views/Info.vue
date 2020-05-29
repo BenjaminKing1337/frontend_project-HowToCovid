@@ -3,10 +3,10 @@
         <h1>Info</h1>
         <hr>
         <div class="gridbox">
-            <div class="covid_info">COVID INFO</div>
-            <div class="guidelines">PRECAUTIONS AND GUIDELINES</div>
-            <div class="symptoms">SYMPTOMS</div>
-            <div class="misconceptions">MISCONCEPTIONS</div>
+            <div class="covid_info"><h2> COVID INFO</h2></div>
+            <div class="guidelines"><h2>PRECAUTIONS AND GUIDELINES</h2></div>
+            <div class="symptoms"><h2>SYMPTOMS</h2></div>
+            <div class="misconceptions"><h2>MISCONCEPTIONS</h2></div>
         </div>
     </div>
 </template>
@@ -23,6 +23,10 @@ h1{
   margin: 0 0 0 1rem;
   color: #5B5A5A;
 }
+h2{
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px black;
+}
 hr{
   width: 50%;
   margin: 0 0 0 1rem;
@@ -35,40 +39,42 @@ hr{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   height: 85vh;
-  margin: 1rem 1rem 1rem 4rem;
+  margin: 1rem 4rem 1rem 4rem;
   gap: 2rem;
 }
 .covid_info{
-    grid-area: 1 / 1 / 3 / 3
+    grid-area: 1 / 1 / 3 / 3;
+    background: url("https://www.conwaymedicalcenter.com/wp-content/uploads/2020/02/Coronavirus-AdobeStock_319024828-scaled.jpeg");
+    background-size: 100% 100%;
 }
 .guidelines{
-    grid-area: 1 / 3 / 3 / 5
+    grid-area: 1 / 3 / 3 / 5;
+    background: url("https://www.psychiatrictimes.com/sites/default/files/Washing%20hands%20soap%20and%20water%20cpt%20Maridav%20adobe.JPG");
+    background-size: 100% 100%;
 }
 .symptoms{
     grid-area: 3 / 1 / 5 / 3;
+    background: url("https://static01.nyt.com/images/2018/05/15/well/ask-fever/ask-fever-superJumbo.jpg");
+    background-size: 100% 100%;
 }
 .misconceptions{
     grid-area: 3 / 3 / 5 / 5;
+    background: url("https://i.kym-cdn.com/photos/images/original/001/515/682/ca8.png");
+    background-size: 100% 100%;
 }
 .covid_info, .guidelines, .symptoms, .misconceptions{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #707070a8;
-  font-size: 2rem;
-  color: #C7D40F;
+  color: white;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   border-radius: 21px;
   overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 @media only screen and (max-width: 900px){
   .gridbox{
-    margin: 1rem;
+    margin: 1rem 1rem 5.5rem 1rem;
     }
   .covid_info{
     grid-area: 1 / 1 / 2 / 5

@@ -22,6 +22,12 @@
                     <span class="link-text">Contact</span>
                 </router-link>
             </li>
+            <li class="nav-item">
+                <router-link class="nav-link" to="/infographic">
+                    <img class="graphics_icon" src="@/assets/graphics.svg" alt="contact" width="2rem">
+                    <span class="link-text">Infographics</span>
+                </router-link>
+            </li>
         </ul>
     </nav>
 </template>
@@ -66,16 +72,19 @@
                 .nav-link{
                     display: flex;
                     align-items: center;
-                    height: 5rem;
+                    height: 4rem;
                     color: white;
                     text-decoration: none;
                 img{
                     min-width: 2rem;
                     margin: 0 1.5rem;
                 }
+                .graphics_icon{
+                    min-width: 1.5rem;
+                    margin: 0 1.7rem;
+                }
                 .link-text{
                     color: white;
-                    margin-left: 1rem;
                     visibility: hidden;
                 }
             }
@@ -92,7 +101,7 @@
         .navbar{
             bottom: 0;
             width: 100vw;
-            height: 5rem;
+            height: 4rem;
         }
         ul{
             flex-direction: row;
@@ -118,10 +127,10 @@
             flex-direction: column;
         }
         .logo{
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
         .nav-item{
-            margin-top: 5rem;
+            margin-top: 3rem;
         }
         .navbar:hover{
             width: 12rem;

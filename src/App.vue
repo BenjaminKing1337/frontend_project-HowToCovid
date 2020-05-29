@@ -25,6 +25,10 @@ body{
   padding: 0;
   background-color: white;
   color: black;
+  background: url("./assets/corona.svg");
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  background-position: 140% -40%;
 }
 body::-webkit-scrollbar{
   width: 0.25rem;
@@ -46,15 +50,17 @@ body::-webkit-scrollbar-thumb{
   font-size: 16px;
 }
 .content{
-  margin-left: 5rem;
-  padding: 1rem;
-  height: auto;
+  padding-top: 1rem;
+  min-height: 100vh;
 }
-
-
 @media only screen and (max-width: 600px){
   .content{
-    margin: 0 0 5rem 0;
+    margin: 0 0 4rem 0;
+  }
+}
+@media only screen and (min-width: 600px){
+  .content{
+    margin-left: 5rem;
   }
 }
 </style>
