@@ -3,10 +3,10 @@
         <h1>Info</h1>
         <hr>
         <div class="gridbox">
-            <div class="covid_info"><h2> COVID INFO</h2></div>
-            <div class="guidelines"><h2>PRECAUTIONS AND GUIDELINES</h2></div>
-            <div class="symptoms"><h2>SYMPTOMS</h2></div>
-            <div class="misconceptions"><h2>MISCONCEPTIONS</h2></div>
+            <router-link to="/covid_info" class="covid_info"><div><h2> COVID INFO</h2></div></router-link>
+            <router-link to="/guidelines" class="guidelines"><div><h2>PRECAUTIONS & GUIDELINES</h2></div></router-link>
+            <router-link to="/symptoms" class="symptoms"><div><h2>SYMPTOMS</h2></div></router-link>
+            <router-link to="/misconceptions" class="misconceptions"><div><h2>MISCONCEPTIONS</h2></div></router-link>
         </div>
     </div>
 </template>
@@ -71,6 +71,12 @@ hr{
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   border-radius: 21px;
   overflow: hidden;
+  text-decoration: none;
+  transition: all 500ms;
+}
+.covid_info:hover, .guidelines:hover, .symptoms:hover,.misconceptions:hover{
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1);
 }
 @media only screen and (max-width: 900px){
   .gridbox{

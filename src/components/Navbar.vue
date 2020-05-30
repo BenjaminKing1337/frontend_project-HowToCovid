@@ -1,5 +1,6 @@
 <template>
     <nav class="navbar">
+        <img class="decoration" src="@/assets/virus_sidebar.png" alt="virus_sidebar" width="80%" height="8%">
         <ul>
             <li class="logo">
                 <img class="covid" src="@/assets/logo.svg" alt="logo" width="2rem">
@@ -44,6 +45,9 @@
         z-index: 999;
         background-color: #5B5A5A;
         transition: 200ms ease-in-out;
+        .decoration{
+            margin-right: 20%;
+        }
         ul{
             list-style: none;
             padding: 0;
@@ -102,6 +106,9 @@
             bottom: 0;
             width: 100vw;
             height: 4rem;
+            .decoration{
+                display: none;
+            }
         }
         ul{
             flex-direction: row;

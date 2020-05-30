@@ -14,6 +14,7 @@
                 <p>Call +45 7020 6044</p>
             </li>
         </ul>
+        <img src="@/assets/virus_footer.png" alt="virus_footer" height="100%" width="10%">
     </footer>
 </template>
 
@@ -37,17 +38,21 @@
     @media only screen and (min-width: 600px){
         footer{
         margin-top: auto;
+        display: flex;
         height: 6rem;
         background-color: #5B5A5A;
+        justify-content: space-between;
         ul{
+            width: 80%;
             list-style: none;
             padding: 0;
-            margin: 0 0 0 12rem;
+            margin: 0 0 0 14rem;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             li{
-                text-align: justify;
+                text-align: start;
+                padding: 0 0.5rem;
             }
         }
     }

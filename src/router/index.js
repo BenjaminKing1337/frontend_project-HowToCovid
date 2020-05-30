@@ -4,6 +4,10 @@ import Home from '../views/Home.vue'
 import Info from '../views/Info.vue'
 import Contact from '../views/Contact.vue'
 import Infographic from '../views/Infographic.vue'
+import Covid_info from '../views/Covid_info.vue'
+import Guidelines from '../views/Guidelines.vue'
+import Symptoms from '../views/Symptoms.vue'
+import Misconceptions from '../views/Misconceptions.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +31,26 @@ Vue.use(VueRouter)
     path: '/infographic',
     name: 'Infographic',
     component: Infographic,
+  },
+  {
+    path: '/covid_info',
+    name: 'Covid_info',
+    component: Covid_info,
+  },
+  {
+    path: '/guidelines',
+    name: 'Guidelines',
+    component: Guidelines,
+  },
+  {
+    path: '/symptoms',
+    name: 'Symptoms',
+    component: Symptoms,
+  },
+  {
+    path: '/misconceptions',
+    name: 'Misconceptions',
+    component: Misconceptions,
   },
   
 ]
