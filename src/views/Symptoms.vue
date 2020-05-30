@@ -147,7 +147,7 @@ hr{
   gap: 2rem;
 }
 .serious,.common,.less{
-    background: #70707069;
+    background: #70707015;
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     border-radius: 21px;
     overflow: hidden;
