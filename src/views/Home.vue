@@ -5,7 +5,7 @@
     <div class="gridbox">
       <div class="welcomebox">
         <h2>Welcome to <span>HowToCovid</span></h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna eu lectus porttitor, volutpat molestie mauris dignissim. Fusce vehicula mauris quis diam consectetur interdum. Phasellus vehicula orci id massa tincidunt, eu elementum lectus interdum. Donec tempus nulla dui, in consequat ante mattis eu. Aenean aliquet pharetra urna, vitae scelerisque erat.</p>
+        <p>We are here to provide some information for you about COVID-19/Coronavirus. Our team collected the most important information and guides to get an overview of how you should behave, if you would like to return to your everyday life.</p>
         </div>
       <div class="videobox">
         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"  width="100%" height="100%"></iframe>
@@ -49,7 +49,7 @@ h2{
 p{
   margin-top: 5rem;
   text-align: start;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .howtocovid{
   color: #C7D40F;;

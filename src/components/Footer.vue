@@ -3,15 +3,15 @@
         <ul>
             <li>
                 <h1>Ministry of Foreign Affairs of Denmark's Citizen Service</h1>
-                <p>Call +45 3392 1112</p>
+                <a href="tel:+4533921112"><p>Call +45 3392 1112</p></a>
             </li>
             <li>
                 <h1>Joint Danish Authorities Hotline</h1>
-                <p>Call +45 7020 0233</p>
+                <a href="tel:+4570200233"><p>Call +45 7020 0233</p></a>
             </li>
             <li>
                 <h1>Arrivals Hotline</h1>
-                <p>Call +45 7020 6044</p>
+                <a href="tel:+4570206044"><p>Call +45 7020 6044</p></a>
             </li>
         </ul>
         <img src="@/assets/virus_footer.png" alt="virus_footer" height="100%" width="10%">
@@ -34,6 +34,9 @@
         color: white;
         font-size: 1vw;
         margin: 0;
+    }
+    a{
+        text-decoration-color: #C7D40F;
     }
     @media only screen and (min-width: 600px){
         footer{
