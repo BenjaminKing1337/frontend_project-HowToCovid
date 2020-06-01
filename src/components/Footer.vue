@@ -14,7 +14,7 @@
                 <a href="tel:+4570206044"><p>Call +45 7020 6044</p></a>
             </li>
         </ul>
-        <img src="@/assets/virus_footer.png" alt="virus_footer" height="100%" width="10%">
+        <img src="@/assets/virus_footer.png" alt="virus_footer" height="100%" width="7%">
     </footer>
 </template>
 

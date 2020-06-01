@@ -3,10 +3,10 @@
         <h1>Info</h1>
         <hr>
         <div class="gridbox">
-            <router-link to="/covid_info" class="covid_info"><div><h2> COVID INFO</h2></div></router-link>
-            <router-link to="/guidelines" class="guidelines"><div><h2>PRECAUTIONS & GUIDELINES</h2></div></router-link>
-            <router-link to="/symptoms" class="symptoms"><div><h2>SYMPTOMS</h2></div></router-link>
-            <router-link to="/misconceptions" class="misconceptions"><div><h2>MISCONCEPTIONS</h2></div></router-link>
+            <router-link to="/covid_info" class="covid_info"><div class="darken"><h2> COVID INFO</h2></div></router-link>
+            <router-link to="/guidelines" class="guidelines"><div class="darken"><h2>PRECAUTIONS & GUIDELINES</h2></div></router-link>
+            <router-link to="/symptoms" class="symptoms"><div class="darken"><h2>SYMPTOMS</h2></div></router-link>
+            <router-link to="/misconceptions" class="misconceptions"><div class="darken"><h2>MISCONCEPTIONS</h2></div></router-link>
         </div>
     </div>
 </template>
@@ -42,6 +42,14 @@ hr{
   margin: 1rem 4rem 1rem 4rem;
   gap: 2rem;
 }
+.darken{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.404);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .covid_info{
     grid-area: 1 / 1 / 3 / 3;
     background: url("https://www.conwaymedicalcenter.com/wp-content/uploads/2020/02/Coronavirus-AdobeStock_319024828-scaled.jpeg");
@@ -59,7 +67,7 @@ hr{
 }
 .misconceptions{
     grid-area: 3 / 3 / 5 / 5;
-    background: url("https://i.kym-cdn.com/photos/images/original/001/515/682/ca8.png");
+    background: url("../assets/what.png");
     background-size: 100% 100%;
 }
 .covid_info, .guidelines, .symptoms, .misconceptions{
@@ -67,7 +75,7 @@ hr{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #C7D40F;;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   border-radius: 21px;
   overflow: hidden;

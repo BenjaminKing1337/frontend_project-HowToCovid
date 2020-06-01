@@ -1,11 +1,20 @@
 <template>
     <div>
-        <h1>Symptoms</h1>
+        <div class="headline">
+            <h1>Symptoms</h1>
+            <router-link tag="button" to="/info" class="back">
+                <img src="@/assets/undo.svg" alt="undo" height="100%" width="100%">
+            </router-link>
+        </div>
         <hr>
         <div class="gridbox">
             <div class="serious">
                 <h2>Serious Symptoms <div class="mark" v-on:click="change = !change">?</div></h2>
-                <div class="description" v-bind:class="{description_on: change}"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna eu lectus porttitor, volutpat molestie mauris dignissim. Fusce vehicula mauris quis diam consectetur interdum. Phasellus vehicula orci id massa tincidunt, eu elementum lectus interdum. Donec tempus nulla dui, in consequat ante mattis eu. Aenean aliquet pharetra urna, vitae scelerisque erat.</p></div>
+                <div class="description" v-bind:class="{description_on: change}">
+                    <p>If you have any of the serious symptoms you should seek immediate medical attention.</p>
+                    <p>Before you visit your doctor or medical facility you should always call first, this is because of the high risk of spreading the virus further.</p>
+                    <p>If you experience any of the symptoms below you should stay home and contact your doctor.</p>
+                </div>
                 <div class="item">
                     <div class="picture" style="background-image: url('https://www.pennmedicine.org/-/media/images/miscellaneous/random%20generic%20photos/woman_hand_on_chest_000071668787_1.ashx?mw=620&mh=408');"></div>
                     <div class="text"><h2>Difficulty breathing or shortness of breath</h2></div>
@@ -21,7 +30,11 @@
             </div>
             <div class="common">
                 <h2>Common Symptoms<div class="mark" v-on:click="change2 = !change2">?</div></h2>
-                <div class="description" v-bind:class="{description_on: change2}"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna eu lectus porttitor, volutpat molestie mauris dignissim. Fusce vehicula mauris quis diam consectetur interdum. Phasellus vehicula orci id massa tincidunt, eu elementum lectus interdum. Donec tempus nulla dui, in consequat ante mattis eu. Aenean aliquet pharetra urna, vitae scelerisque erat.</p></div>
+                <div class="description" v-bind:class="{description_on: change2}">
+                    <p>If you are experiencing these common symptoms but you are otherwise healthy, you should try and manage these symptoms at home, seek medical attention only when the symptoms don't seem to go away.</p>
+                    <p>Do not forget to call your doctor first, when trying to get help.</p>
+                    <p>You might also consider calling The Joint Danish Authorities Hotline to answer your questions further.</p>
+                </div>
                 <div class="item">
                     <div class="picture" style="background-image: url('https://www.popsci.com/resizer/Eb9bzlUxn-mM1pJiqFujF4DIbeI=/760x570/filters:focal(1797x1348:1798x1349)/arc-anglerfish-arc2-prod-bonnier.s3.amazonaws.com/public/FZSIZXI2E7VBKANGIGV2G3MYAY.jpg');"></div>
                     <div class="text"><h2>Fever</h2></div>
@@ -37,7 +50,11 @@
             </div>
             <div class="less">
                 <h2>Less Common Symptoms<div class="mark" v-on:click="change3 = !change3">?</div></h2>
-                <div class="description" v-bind:class="{description_on: change3}"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer mollis magna eu lectus porttitor, volutpat molestie mauris dignissim. Fusce vehicula mauris quis diam consectetur interdum. Phasellus vehicula orci id massa tincidunt, eu elementum lectus interdum. Donec tempus nulla dui, in consequat ante mattis eu. Aenean aliquet pharetra urna, vitae scelerisque erat.</p></div>
+                <div class="description" v-bind:class="{description_on: change3}">
+                    <p>Experiencing any of these symptoms does not definately mean you were infected with the coronavirus.</p>
+                    <p>Nevertheless, you should still pay them attention in case there is no other reason for you experiencing these symptoms.</p>
+                    <p>Do not panick and stay at home before you contact your doctor.</p>
+                </div>
                 <div class="item">
                     <div class="picture" style="background-image: url('https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/732x549_THUMBNAIL_Jewell_Clinical_BodyAches.jpg?w=756&h=567');"></div>
                     <div class="text"><h2>Aches and pains</h2></div>
@@ -84,10 +101,29 @@
 </script>
 
 <style lang="scss" scoped>
+.headline{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: flex-end;
+}
 h1{
   text-align: start;
   margin: 0 0 0 1rem;
   color: #5B5A5A;
+}
+.back{
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    background: #c9c0c0;
+    border-radius: 50px;
+    box-shadow: -2px 2px 2px black;
+    &:hover{
+        background: #a7a3a3;
+    }
 }
 h2{
     color: #5B5A5A;
@@ -96,6 +132,7 @@ h2{
 }
 p{
     padding: 0 0.5rem;
+    font-size: 1rem;
 }
 .mark{
     background: #5B5A5A;
@@ -113,7 +150,7 @@ p{
     }
 }
 .description{
-    margin: 0 1rem;
+    margin: 0 2rem;
     font-size: 0.9rem;
     visibility: hidden;
     transition: 300ms all;
@@ -185,6 +222,13 @@ hr{
     }
 }
 @media only screen and (max-width: 900px){
+    .back{
+        width: 40px;
+       height: 40px;
+        &:hover{
+            background: #a7a3a3;
+        }
+    }
     .description{
         width: 80%;
     }

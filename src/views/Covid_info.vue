@@ -1,6 +1,11 @@
 <template>
     <div>
-        <h1>Covid Info</h1>
+        <div class="headline">
+            <h1>Covid Info</h1>
+            <router-link tag="button" to="/info" class="back">
+                <img src="@/assets/undo.svg" alt="undo" height="100%" width="100%">
+            </router-link>
+        </div>
         <hr>
         <div class="gridbox">
             <div>
@@ -24,10 +29,29 @@
 </script>
 
 <style lang="scss" scoped>
+.headline{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: flex-end;
+}
 h1{
   text-align: start;
   margin: 0 0 0 1rem;
   color: #5B5A5A;
+}
+.back{
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    background: #c9c0c0;
+    border-radius: 50px;
+    box-shadow: -2px 2px 2px black;
+    &:hover{
+        background: #a7a3a3;
+    }
 }
 h2{
     color: #5B5A5A;
@@ -52,6 +76,13 @@ hr{
   text-align: start;
 }
 @media only screen and (max-width: 900px){
+    .back{
+        width: 40px;
+       height: 40px;
+        &:hover{
+            background: #a7a3a3;
+        }
+    }
     .gridbox{
         margin: 1rem 1rem 4rem 1rem;
     }

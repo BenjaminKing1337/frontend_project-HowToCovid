@@ -1,6 +1,11 @@
 <template>
     <div>
-        <h1>Precautions</h1>
+        <div class="headline">
+            <h1>Precautions</h1>
+            <router-link tag="button" to="/info" class="back">
+                <img src="@/assets/undo.svg" alt="undo" height="100%" width="100%">
+            </router-link>
+        </div>
         <hr>
         <div class="gridbox_precautions">
             <div class="precautions">
@@ -42,7 +47,7 @@
             <div class="handshake">
                 <img src="@/assets/Touch.png" alt="distance" width="90%" height="90%">
                 <h2>AVOID UNNECESSARY
-                   <br> TOUCHING OF HANDS </h2>
+                    TOUCHING OF HANDS </h2>
             </div>
             <div class="disinfect">
                 <img src="@/assets/Disinfect.png" alt="distance" width="90%" height="90%">
@@ -60,10 +65,29 @@
 </script>
 
 <style lang="scss" scoped>
+.headline{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    align-items: flex-end;
+}
 h1{
   text-align: start;
   margin: 0 0 0 1rem;
   color: #5B5A5A;
+}
+.back{
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    background: #c9c0c0;
+    border-radius: 50px;
+    box-shadow: -2px 2px 2px black;
+    &:hover{
+        background: #a7a3a3;
+    }
 }
 h2{
     color: #5B5A5A;
@@ -101,71 +125,81 @@ hr{
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     border-radius: 21px;
     overflow: hidden;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .distance{
     grid-area: 1 / 1 / 2 / 3;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 1fr;
     img{
-        grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
     }
     h2{
-        grid-area: 1/ 2 / 2 / 3;
+        width: 70%;
         align-self: center;
     }
 }
 .wash{
     grid-area: 1 / 3 / 3 / 4;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.6fr 1fr;
+    flex-direction: column;
+    align-items: center;
     img{
-        grid-area: 1 / 1 / 2 / 2;
+        width: 80%;
+        height: 50%;
     }
     h2{
-        grid-area: 2/ 1 / 3 / 2;
+        width: 100%;
         align-self: center;
     }
 }
 .cough{
     grid-area: 2 / 1 / 4 / 2;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.6fr;
+    flex-direction: column;
+    flex-direction: column-reverse;
     img{
-        grid-area: 2 / 1 / 3 / 2;
+        width: 90%;
+        height: 50%;
     }
     h2{
-        grid-area: 1/ 1 / 2 / 2;
+        width: 100%;
         align-self: center;
     }
 }
 .handshake{
     grid-area: 2 / 2 / 3 / 3;
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-rows: 1fr;
     img{
-        grid-area: 1 / 1 / 2 / 2;
+        width: 45%;
+        height: 100%;
     }
     h2{
-        grid-area: 1/ 2 / 2 / 3;
+        width: 55%;
         align-self: center;
+        word-wrap: break-word   ;
     }
 }
 .disinfect{
     grid-area: 3 / 2 / 4 / 4;
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 1fr;
+    flex-direction: row-reverse;
     img{
-        grid-area: 1 / 2 / 2 / 3;
+        width: 30%;
+        height: 100%;
     }
     h2{
-        grid-area: 1/ 1 / 2 / 2;
+        width: 70%;
         align-self: center;
     }
 }
 @media only screen and (max-width: 900px){
+    .back{
+        width: 40px;
+       height: 40px;
+        &:hover{
+            background: #a7a3a3;
+        }
+    }
     h2{
         font-size: 1rem;
     }
@@ -183,61 +217,59 @@ hr{
     }
     .distance{
         grid-area: 1 / 1 / 2 / 2;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
         img{
-            grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
         }
         h2{
-            grid-area: 1/ 2 / 2 / 3;
+            width: 70%;
             align-self: center;
         }
         }
     .wash{
         grid-area: 2 / 1 / 3 / 2;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows:1fr;
+        flex-direction: row;
         img{
-            grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
         }
         h2{
-            grid-area: 1/ 2 / 2 / 3;
+            width: 70%;
             align-self: center;
         }
     }
     .cough{
         grid-area: 3 / 1 / 4 / 2;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
+        flex-direction: row;
         img{
-            grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
         }
         h2{
-            grid-area: 1/ 2 / 2 / 3;
+            width: 70%;
             align-self: center;
         }
     }
     .handshake{
         grid-area: 4 / 1 / 5 / 2;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
         img{
-            grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
         }
         h2{
-            grid-area: 1/ 2 / 2 / 3;
+            width: 70%;
             align-self: center;
         }
     }
     .disinfect{
         grid-area: 5 / 1 / 6 / 2;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
+        flex-direction: row;
         img{
-            grid-area: 1 / 1 / 2 / 2;
+        width: 30%;
+        height: 100%;
         }
         h2{
-            grid-area: 1/ 2 / 2 / 3;
+            width: 70%;
             align-self: center;
         }
     }

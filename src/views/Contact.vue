@@ -5,11 +5,12 @@
         <div class="gridbox">
             <div class="dk_hotline">
                 <h2>Joint Danish Authorities Hotline</h2>
+                <p>If you cannot find the answers to your questions about novel coronavirus/COVID-19 online, you can call the joint authorities’ hotline. The joint authority's hotline can also assist in detecting and advising close contacts on behalf of the Danish Agency for Patient Safety.</p>
                 <a href="tel:+4570200233"><h3>Call +45 7020 0233</h3></a>
             </div>
             <div class="ministry">
                 <h2>Ministry of Foreign Affairs of Denmark's Citizen Service</h2>
-                <p>For general advice about travel and foreign affairs.</p>
+                <p>The Ministry of Foreign Affairs can answer questions on, e.g. travelling and queries from Danes living abroad.</p>
                 <a href="tel:+4533921112"><h3>Call +45 3392 1112</h3></a>
                 <a href="mailto:bbb@um.dk"><h3>Email: bbb@um.dk</h3></a>
             </div>
@@ -49,9 +50,11 @@ h3{
     color: rgb(156, 152, 152);
 }
 p{
-    text-align: justify ;
+    text-align: start ;
     line-height: 3vh;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    width: 90%;
+    padding: 0 1rem;
 }
 a{
     text-decoration-color: #C7D40F;
@@ -67,16 +70,16 @@ hr{
   display: grid;
   grid-template-columns: 1.4fr 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  height: 100%;
+  height: auto;
   margin: 1rem 4rem 0 4rem;
-  
+  gap: 1rem;
 }
 .dk_hotline,.ministry,.arrivals_hotline{
     height: 100%;
     width: 100%;
 }
 .dk_hotline{
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 3;
 }
 .ministry{
     grid-area: 1 / 3 / 3 / 4;
@@ -110,7 +113,7 @@ hr{
     }
     .gridbox{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1.4fr 3fr;
+        grid-template-rows: 1fr 1fr 2fr;
         margin: 1rem 1rem 8rem 1rem;
         }
     .dk_hotline{
