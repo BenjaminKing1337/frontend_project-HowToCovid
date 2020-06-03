@@ -90,9 +90,9 @@
           <div class="mark" v-on:click="change3 = !change3">?</div>
         </h2>
         <div class="description" v-bind:class="{description_on: change3}">
-          <p>Experiencing any of these symptoms does not definately mean you were infected with the coronavirus.</p>
-          <p>Nevertheless, you should still pay them attention in case there is no other reason for you experiencing these symptoms.</p>
-          <p>Do not panick and stay at home before you contact your doctor.</p>
+          <p>Experiencing any of these symptoms does not definitively mean you were infected with the coronavirus.</p>
+          <p>Nevertheless, you should still pay them attention in case there is no other reason for you to be experiencing these symptoms.</p>
+          <p>Do not panic and contact your doctor from home.</p>
         </div>
         <div class="item">
           <div
