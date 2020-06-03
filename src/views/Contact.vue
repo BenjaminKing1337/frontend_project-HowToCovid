@@ -19,9 +19,15 @@
         <a href="mailto:bbb@um.dk">
           <h3>Email: bbb@um.dk</h3>
         </a>
+        <br><br><br>
+        <h2>Your Personal Doctor</h2>
+        <p>Don't forget, as long as they pick up, your doctor is always the best option when calling about health concerns.</p>
+<a>
+          <h3>The number can be found on your yellow health card (Sunhedskort).</h3>
+        </a>
       </div>
       <div class="arrivals_hotline">
-        <h2>Arrivals hotline</h2>
+        <h2>Arrivals Hotline</h2>
         <p>Foreigners arriving in Denmark will be refused entry to Denmark at all internal and external borders unless they have a worthy purpose of entering Denmark. Purposes characterised as worthy are described on the page: If you are travelling to and from Denmark. This page provides answers to most of the frequently asked questions. If your question is not answered, the Danish police has opened a dedicated hotline to answer questions about worthy purposes of travelling to or transiting Denmark.</p>
         <a href="tel:+4570206044">
           <h3>Call +45 7020 6044</h3>
