@@ -3,7 +3,7 @@
     <div class="headline">
       <h1>Misconceptions</h1>
       <router-link tag="button" to="/info" class="back">
-        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" />RETURN
+        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" /><h1 class="return">RETURN</h1>
       </router-link>
     </div>
     <hr />
@@ -64,8 +64,8 @@ h1 {
   color: #5b5a5a;
   display: flex;
   flex-direction: row;
+  align-items: center;
   font-weight: bold;
-  font-size: 40px;
   direction: rtl;
   height: 50px;
   width: 50px;
@@ -76,14 +76,24 @@ h1 {
   border-radius: 50px;
   box-shadow: -2px 2px 2px black;
   &:hover {
-    background: #a7a3a3;
+    background: #949191;
     color: #c7d40f;
   }
+.return{
+  transition: 300ms ease-in-out;
+  &:hover{
+    color: #8d8b8b;
+  }
+}
 }
 h2 {
   color: #5b5a5a;
   padding: 0 0.4rem;
   text-align: start;
+  transition: 200ms ease-in-out;
+  &:hover {
+    color: #8d8989;
+  }
 }
 p {
   padding: 0 1rem;
@@ -162,6 +172,9 @@ hr {
     height: 40px;
     &:hover {
       background: #a7a3a3;
+    }
+    .return{
+      display: none;
     }
   }
   hr {

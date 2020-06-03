@@ -22,7 +22,7 @@
         <br><br><br>
         <h2>Your Personal Doctor</h2>
         <p>Don't forget, as long as they pick up, your doctor is always the best option when calling about health concerns.</p>
-<a>
+        <a>
           <h3>The number can be found on your yellow health card (Sunhedskort).</h3>
         </a>
       </div>
@@ -131,7 +131,7 @@ hr {
   }
   .gridbox {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     margin: 1rem 1rem 8rem 1rem;
   }
   .dk_hotline {

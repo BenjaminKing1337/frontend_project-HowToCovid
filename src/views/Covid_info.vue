@@ -3,7 +3,7 @@
     <div class="headline">
       <h1>Covid Info</h1>
       <router-link tag="button" to="/info" class="back">
-        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" />RETURN
+        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" /><h1 class="return">RETURN</h1>
       </router-link>
     </div>
     <hr />
@@ -47,7 +47,7 @@ h1 {
   display: flex;
   flex-direction: row;
   font-weight: bold;
-  font-size: 40px;
+  align-items: center;
   direction: rtl;
   height: 50px;
   width: 50px;
@@ -61,10 +61,20 @@ h1 {
     background: #a7a3a3;
     color: #c7d40f;
   }
+  .return{
+    transition: 300ms ease-in-out;
+  &:hover{
+    color: #8d8b8b;
+  }
+}
 }
 h2 {
   color: #5b5a5a;
   animation: appear 0.3s ease-out;
+  transition: 200ms ease-in-out;
+  &:hover {
+    color: #8d8989;
+  }
 }
 p {
   margin-left: 1rem;
@@ -92,6 +102,9 @@ hr {
     height: 40px;
     &:hover {
       background: #a7a3a3;
+    }
+    .return{
+      display: none;
     }
   }
   .gridbox {

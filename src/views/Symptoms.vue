@@ -3,7 +3,7 @@
     <div class="headline">
       <h1>Symptoms</h1>
       <router-link tag="button" to="/info" class="back">
-        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" /> RETURN
+        <img src="@/assets/undo.svg" alt="undo" class="undo" height="100%" width="100%" /><h1 class="return">RETURN</h1>
       </router-link>
     </div>
     <hr />
@@ -195,7 +195,7 @@ h1 {
   display: flex;
   flex-direction: row;
   font-weight: bold;
-  font-size: 40px;
+  align-items: center;
   direction: rtl;
   height: 50px;
   width: 50px;
@@ -209,13 +209,20 @@ h1 {
     background: #a7a3a3;
     color: #c7d40f;
   }
+  .return{
+    transition: 300ms ease-in-out;
+  &:hover{
+    color: #8d8b8b;
+  }
+}
 }
 h2 {
   color: #5b5a5a;
   margin: 1rem 0.4rem;
   display: flex;
+  transition: 200ms ease-in-out;
   &:hover {
-    color: #c7d40f;
+    color: #8d8989;
   }
 }
 p {
@@ -305,7 +312,12 @@ hr {
     height: 100%;
     width: 20%;
     background-size: 100% 100%;
+    background-position: center;
     border-radius: 50px;
+    transition: 300ms ease-in-out;
+    &:hover{
+      background-size: 104% 104%;
+    }
   }
   .text {
     display: flex;
@@ -324,6 +336,9 @@ hr {
     height: 40px;
     &:hover {
       background: #a7a3a3;
+    }
+    .return{
+      display: none;
     }
   }
   .description {

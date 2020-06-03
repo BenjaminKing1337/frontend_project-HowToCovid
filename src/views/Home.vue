@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>HOME</h1>
+    <h1>Home</h1>
     <hr />
     <div class="gridbox">
       <div class="welcomebox">
